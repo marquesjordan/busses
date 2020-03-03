@@ -1,5 +1,5 @@
 module.exports = app => {
-    app.get("/api/contacts", function(req, res) {
+    app.get("/api/routes", function(req, res) {
         const {
             stop1,
             stop2,
