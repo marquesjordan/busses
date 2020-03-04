@@ -34,7 +34,7 @@ module.exports = app => {
         } = req.body;
 
         const date = new Date();
-        const defaultTime = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        const defaultTime = new Date('2020, 1, 1');
         
         const diffTimeNowDayStart = moment(date).diff(moment(defaultTime), 'm');
         
