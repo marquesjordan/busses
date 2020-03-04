@@ -12,7 +12,9 @@ module.exports = app => {
         const addTime = 15 * mulitple15;
         
         return {
-            name: stop,
+            name: {
+                stop: stop
+            },
             route1: {
                 time1: moment(startTimeStop1Route1).add(addTime + 15, 'm').format('h:mm a'),
                 time2: moment(startTimeStop1Route1).add(addTime + 30, 'm').format('h:mm a')
