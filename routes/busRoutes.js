@@ -34,9 +34,10 @@ module.exports = app => {
             date
         } = req.body;
 
-        const defaultTime = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        const d = new Date(date)
+        const defaultTime = new Date(d.getFullYear(), d.getMonth(), d.getDate());
         
-        const diffTimeNowDayStart = moment(date).diff(moment(defaultTime), 'm');
+        const diffTimeNowDayStart = moment(d).diff(moment(defaultTime), 'm');
         
         let finalGroup = []
 
