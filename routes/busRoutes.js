@@ -32,12 +32,12 @@ module.exports = app => {
     app.post("/api/routes", function(req, res) {
         const {
             stops,
-            time
+            time,
+            utc
         } = req.body;
 
         const d = new Date();
         d.setTime(time);
-        const utc = d.getTimezoneOffset()
         const defaultTime = new Date(d.getFullYear(), d.getMonth(), d.getDate());
         
         const diffTimeNowDayStart = moment(d).diff(moment(defaultTime), 'm');
