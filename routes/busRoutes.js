@@ -31,10 +31,11 @@ module.exports = app => {
     app.post("/api/routes", function(req, res) {
         const {
             stops,
-            date
+            time
         } = req.body;
 
-        const d = new Date(date)
+        const d = new Date();
+        d.setTime(time);
         const defaultTime = new Date(d.getFullYear(), d.getMonth(), d.getDate());
         
         const diffTimeNowDayStart = moment(d).diff(moment(defaultTime), 'm');
