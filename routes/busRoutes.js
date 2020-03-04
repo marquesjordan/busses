@@ -27,7 +27,7 @@ module.exports = app => {
         }
     }          
 
-    app.get("/api/routes", function(req, res) {
+    app.post("/api/routes", function(req, res) {
         const {
             stops
         } = req.body;
