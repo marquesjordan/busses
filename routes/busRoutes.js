@@ -4,7 +4,7 @@ module.exports = app => {
     
     const getTimes = (defaultTime, diffTimeNowDayStart, stop, utc) => {
 
-        const utcUpdate = moment(defaultTime).add(utc, 'm')._d;
+        const utcUpdate = moment(defaultTime).subtract(utc, 'm')._d;
         const startTimeStop1Route1 = moment(utcUpdate).add((stop - 1) * 2, 'm')._d;
         const startTimeStop1Route2 = moment(startTimeStop1Route1).add(2, 'm')._d;
         const startTimeStop1Route3 = moment(startTimeStop1Route1).add(4, 'm')._d;
